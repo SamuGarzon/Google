@@ -1,0 +1,234 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: rgb(32 33 36);
+    --seconday-color: #fff;
+    --terciary-color: #3c4043;
+
+    --bg1-color: #171717;
+    --bg2-color: #303134;
+
+    --text1-color: #9aa0a6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+
+.header {
+    width: 100%;
+    margin-bottom: 3rem; 
+    flex-grow: 0;
+}
+
+.nav {
+    padding: 1rem;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav__list--item {
+    font-size: 1.3rem;
+    list-style: none;
+    padding: 1rem;
+}
+
+.nav__list--item a {
+    color: var(--seconday-color);
+}
+
+.nav__list--item .menu-icon, .nav__list--item .photo{
+    color: var(--seconday-color);
+    width: 3.5rem;
+    border-radius: 50%;
+    padding: 0.2rem;
+}
+
+.nav__list--item .photo:hover,  .nav__list--item .menu-icon:hover {
+    box-shadow: var(--terciary-color) 0 2px 5px, 
+                var(--terciary-color) 0 -2px 5px,
+                var(--terciary-color) 2px 0 5px, 
+                var(--terciary-color) -2px 0 5px;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main .section{
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search {
+    display: flex;
+    flex-flow: row wrap;
+    border: .05rem var(--text1-color) solid;
+    width: 80%;
+    padding: 1rem 0;
+    border-radius: 3rem;
+    box-sizing: border-box;
+    height: auto;
+}
+
+#search:hover {
+    background-color: var(--bg2-color);
+    box-shadow: var(--terciary-color) 0 1px 5px, var(--terciary-color) 0 -1px 5px;
+    border: none;
+}
+
+.section__element--img {
+    margin: 3rem 0 1rem 0;
+}
+
+.section__element img, .section__element div {
+    cursor: pointer;
+}
+
+#search input {
+    order: 1;
+    outline: none;
+    background-color: inherit;
+    padding: 0.3rem 0;
+    flex-grow: 1;
+    border: none;
+    color: var(--seconday-color);
+}
+
+#search img {
+    width: 2rem;
+    height: 2rem;
+}
+
+#search .search {
+    order: 0;
+    margin-left: 1.6rem;
+    margin-right: 1.6rem;
+}
+
+#search .mic {
+    order: 2;
+    margin-left: 0.4rem;
+    margin-right: 0.8rem;
+}
+
+#search .cam {
+    order: 3;
+    margin-right: 1.6rem;
+}
+
+.section__element:nth-child(3) {
+    display: flex;
+}
+
+.section__element--box {
+    background-color: var(--bg2-color);
+    color: var(--seconday-color);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border-radius: 0.4rem;
+    margin: 2rem 0.5rem 0;
+}
+
+.section__element--box:hover {
+    border: 0.1rem var(--seconday-color) solid;
+}
+
+.section__element--text {
+    color: var(--text1-color);
+    font-size: 1.1rem;
+    padding: 2rem 0;
+}
+
+.section__element--text a {
+    color: rgb(85, 85, 250);
+}
+
+.footer {
+    width: 100%;
+    background-color: var(--bg1-color);
+    margin-top: 4rem;
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__content {
+    border-bottom: 1px solid var(--text1-color);
+}
+
+.footer__content--text {
+    width: 100%;
+    color: var(--text1-color);
+    font-size: 1.4rem;
+    padding: 1.7rem 4rem;
+}
+
+.footer__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 1rem 0.5rem;
+}
+
+.footer__box div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.footer__content--left {
+    justify-self: flex-start;
+    margin-left: 2rem;
+}
+
+.footer__content--right {
+    justify-self: flex-end;
+    margin-right: 2rem;
+}
+
+
+.footer__box a {
+    color: var(--text1-color);
+    font-size: 1.3rem;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+
+/* General Styles */
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
