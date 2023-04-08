@@ -89,21 +89,25 @@ body {
     display: flex;
     flex-flow: row wrap;
     border: .05rem var(--text1-color) solid;
-    width: 80%;
+    width: 75%;
     padding: 1rem 0;
     border-radius: 3rem;
-    box-sizing: border-box;
     height: auto;
+    align-items: center;
 }
 
 #search:hover {
     background-color: var(--bg2-color);
     box-shadow: var(--terciary-color) 0 1px 5px, var(--terciary-color) 0 -1px 5px;
-    border: none;
+    border: 0.1rem solid transparent;
 }
 
 .section__element--img {
-    margin: 3rem 0 1rem 0;
+    height: auto;
+    width: 100%;
+    justify-self: center;
+    display: inline-block;
+    margin: 3rem auto 1.5rem auto;
 }
 
 .section__element img, .section__element div {
@@ -118,6 +122,8 @@ body {
     flex-grow: 1;
     border: none;
     color: var(--seconday-color);
+    font-size: 1.4rem;
+    line-height: 2rem;
 }
 
 #search img {
@@ -142,17 +148,20 @@ body {
     margin-right: 1.6rem;
 }
 
-.section__element:nth-child(3) {
+.section__element:nth-child(2n-1) {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .section__element--box {
     background-color: var(--bg2-color);
     color: var(--seconday-color);
     padding: 1rem 2rem;
-    font-size: 1rem;
+    font-size: 1.4rem;
     border-radius: 0.4rem;
     margin: 2rem 0.5rem 0;
+    border: 0.1rem solid transparent;
 }
 
 .section__element--box:hover {
@@ -161,12 +170,12 @@ body {
 
 .section__element--text {
     color: var(--text1-color);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     padding: 2rem 0;
 }
 
 .section__element--text a {
-    color: rgb(85, 85, 250);
+    color: rgb(91, 91, 229);
 }
 
 .footer {
@@ -231,4 +240,65 @@ a {
 a:hover {
     text-decoration: underline;
     cursor: pointer;
+}
+
+/* Media Queries for small devices */
+@media (min-width: 300px) and (max-width: 450px){
+
+    .nav__list--item {
+        font-size: 1.2rem;
+    }
+
+    .main .section {
+        height: 70vh;
+    }
+
+    .section__element--img {
+        width: 70%;
+    }
+
+    .section__element--box {
+        margin: 2rem 1rem 0 0;
+        font-size: 1.3rem;
+    }
+
+    .section__element input {
+        width: 40%
+    }
+
+    .section__element--text {
+        font-size: 1.3rem;
+        padding: 1rem;
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .section__element--text a {
+        margin-top: 0.51rem;
+    }
+
+    #search img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .footer__box a, .footer__content--text {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 450px) and (max-width: 768px) {
+
+    .section__element--img {
+        width: 80%;
+    }
+
+    .section__element input {
+        width: 60%
+    }
+
+    .main .section {
+        height: 60vh;
+    }
 }
